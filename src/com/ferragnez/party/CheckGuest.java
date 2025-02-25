@@ -12,15 +12,26 @@ public class CheckGuest {
         boolean isGuest = false;
 
         // using for cicle
-        for (int i = 0; i < guests.length; i++) {
+        /*
+         * for (int i = 0; i < guests.length; i++) {
+         * if (name.equals(guests[i])) {
+         * isGuest = true;
+         * break;
+         * }
+         * }
+         */
+
+        // using while cicle
+        int i = 0;
+        while (i < guests.length && !isGuest) {
             if (name.equals(guests[i])) {
                 isGuest = true;
-                break;
             }
+            i++;
         }
 
         if (isGuest) {
-            System.out.println("Benvenuto alla festa" + name + "!");
+            System.out.println("Benvenuto alla festa " + name + "!");
         } else {
             System.out.println("Mi dispiace, " + name + " non sei in lista.");
         }
